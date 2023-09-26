@@ -6,7 +6,9 @@ const Home = () => {
         data: blogs,
         isLoading,
         error,
-    } = useFetch("http://localhost:8000/blogs");
+    } = useFetch(
+        "https://my-json-server.typicode.com/ahmed-abbe/JSON-server/blogs"
+    );
 
     return (
         <section className="home">

@@ -7,10 +7,10 @@ const Header = () => {
             <nav>
                 <ul className="links">
                     <li>
-                        <Link to="/">home</Link>
+                        <Link to="/Blog-App">home</Link>
                     </li>
                     <li>
-                        <Link to="/create">new blog</Link>
+                        <Link to="/Blog-App/create">new blog</Link>
                     </li>
                 </ul>
             </nav>

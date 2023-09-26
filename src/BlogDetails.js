@@ -1,13 +1,15 @@
 import useFetch from "./useFetch";
 
 const BlogDetails = () => {
-    let id = window.location.pathname.split("/")[2];
+    let id = window.location.pathname.split("/")[3];
 
     const {
         data: blog,
         isLoading,
         error,
-    } = useFetch(`http://localhost:8000/blogs/${id}`);
+    } = useFetch(
+        `https://my-json-server.typicode.com/ahmed-abbe/JSON-server/blogs/${id}`
+    );
 
     return (
         <div className="blog-detail">

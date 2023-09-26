@@ -13,9 +13,12 @@ function App() {
                 <Header />
                 <div className="component">
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/create" element={<Create />} />
-                        <Route path="/blog/:id" element={<BlogDetails />} />
+                        <Route path="/Blog-App" element={<Home />} />
+                        <Route path="/Blog-App/create" element={<Create />} />
+                        <Route
+                            path="/Blog-App/blog/:id"
+                            element={<BlogDetails />}
+                        />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </div>

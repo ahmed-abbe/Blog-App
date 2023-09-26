@@ -14,13 +14,16 @@ const Create = () => {
 
             setIsLoading(true);
 
-            fetch("http://localhost:8000/blogs", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(newBlog),
-            }).then(() => {
+            fetch(
+                "https://my-json-server.typicode.com/ahmed-abbe/JSON-server/blogs",
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(newBlog),
+                }
+            ).then(() => {
                 setIsLoading(false);
-                window.location.assign("/");
+                window.location.assign("/Blog-App");
             });
         }
     };
