@@ -1,0 +1,278 @@
+/* Import The Fonts From Google  */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap");
+/* Start Variables */
+:root {
+    --main-color: #2196f3;
+    --main-red: #f44336;
+}
+/* End Variables */
+/* Start Globals Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.error {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--main-red);
+}
+.loading {
+    height: calc(100vh - (92px + 30px));
+    position: relative;
+}
+.loading::after {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    left: 50%;
+    top: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
+    border-radius: 50%;
+    border: 6px solid var(--main-color);
+    border-right-color: transparent;
+    animation: loading 1s linear infinite;
+}
+/* End Global Rules */
+/* Start header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    position: relative;
+    margin-bottom: 30px;
+}
+header::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px;
+    left: 15px;
+    bottom: 5px;
+    background-color: #aaa;
+}
+header .logo {
+    margin: 0;
+    color: var(--main-color);
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+header nav ul li a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+header nav ul li:last-child a {
+    background-color: var(--main-color);
+    color: white;
+    padding: 3px 6px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+/* End header */
+/* Start Home Section */
+section.home .blog-list .heading {
+    margin: 0 0 10px;
+    font-size: 35px;
+}
+section.home .blog {
+    padding: 10px 7px;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+section.home .blog:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+section.home .blog:hover {
+    box-shadow: 7px 10px 10px 0 rgb(0 0 0 / 0.1);
+}
+section.home .blog h1 {
+    margin: 5px 0 0;
+    color: var(--main-color);
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+section.home .blog p {
+    margin: 0 0 0 3px;
+    color: #666;
+}
+section.home .blog button {
+    padding: 6px 8px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--main-red);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/* End Home Section */
+/* Start Blog Detail Section */
+.blog-detail article h1 {
+    font-size: 25px;
+    margin: 0;
+    color: var(--main-color);
+}
+.blog-detail article p:first-of-type {
+    color: #777;
+    font-size: 16px;
+    margin: 0 0 20px;
+}
+.blog-detail article p:last-of-type {
+    margin: 0;
+    font-size: 18px;
+    word-break: break-all;
+}
+/* End Blog Detail Section */
+/* Start Create Section */
+.create-form {
+    text-align: center;
+}
+.create-form h1 {
+    color: var(--main-color);
+    font-size: 35px;
+    margin: 0 0 10px;
+}
+.create-form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.create-form div > * {
+    width: 500px;
+    max-width: 100%;
+    height: 35px;
+    padding: 5px;
+    outline: none;
+    font-size: 16px;
+}
+.create-form div label {
+    font-size: 20px;
+}
+.create-form div input,
+.create-form div textarea {
+    border: 1px solid var(--main-color);
+    caret-color: var(--main-color);
+    margin: 5px 0;
+    border-radius: 6px;
+}
+.create-form div textarea {
+    height: 200px;
+    resize: none;
+}
+.create-form button {
+    padding: 8px 12px;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 18px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.create-form div ::placeholder {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.create-form div :focus::placeholder {
+    opacity: 0;
+}
+.create-form button.wait {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+}
+/* End Create Section */
+/* Start Not Found Section */
+.not-found {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.not-found div {
+    display: flex;
+    flex-wrap: wrap;
+}
+.not-found div h1 {
+    font-size: 40px;
+    color: var(--main-red);
+}
+.not-found div a {
+    color: black;
+    font-size: 20px;
+}
+.not-found img {
+    width: 450px;
+    max-width: 100%;
+    animation: up-down 3s infinite linear;
+}
+@media (max-width: 767px) {
+    .not-found {
+        flex-direction: column;
+    }
+    .not-found div {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}
+/* End Not Found Section */
+/* Start Animation */
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes up-down {
+    25% {
+        transform: translateY(15px);
+    }
+    75% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* End Animation */
